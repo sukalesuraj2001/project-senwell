@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        /* margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* background-color: #130f40; */
+        /* font-family: 'Lato' !important; */
+    }
+    .search-box {
+    /* background-color: #5d4ac5; */
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden; /* Add overflow: hidden to hide the initially taller input */
+}
+
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    /* background-color: #22a6b3; */
+    padding-right: 40px;
+    color: #fff;
+    position: absolute;
+    top: 0; /* Initially, place it at the top */
+    transform-origin: top center;
+    transform: scaleY(0); /* Scale it to zero height */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.input-search::placeholder {
+    /* color: rgba(255, 255, 255, .5); */
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.btn-search:focus~.input-search,
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+    transform: scaleY(1); /* Expand the input box when focused */
+    transform-origin: top center;
+}
+
+/* Rest of your CSS remains the same */
+
+    /* footer  */
+</style>
+
+<body>
+    <div class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input type="text" class="input-search" placeholder="Type to Search...">
+
+
+
+    </div>
+</body>
+
+</html>
